@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+    .swiper-container {
+      width: 350px;
+      height: 350px;
+      margin-top: 100px;
+    }
+    .swiper-slide {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff; /* Tambahkan warna latar belakang sesuai kebutuhan */
+      border-radius: 10px; /* Tambahkan efek sudut melengkung pada kartu */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan pada kartu */
+    }
+    img{
+      width: 100%;
+    }
+    button{
+      border: none;
+      background-color: rgba(0, 0, 0, 0.0)
+    }
+    h1{
+      background-color: lightpink;
+      border: none;
+      border-radius: 20px;
+      height: 35px;
+      width: 90px;
+      padding-top: 5px;
+    }
+  </style>
+  <title>Swiper Slide</title>
+</head>
+<body>
+<center>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="/bin/1.jpg"></div>
+      <div class="swiper-slide"><img src="/bin/2.jpg"></div>
+      <div class="swiper-slide"><img src="/bin/3.jpg"></div>
+      <div class="swiper-slide"><img src="/bin/4.jpg"></div>
+      <div class="swiper-slide"><img src="/bin/5.jpg"></div>
+      <div class="swiper-slide"><img src="/bin/6.jpg"></div>
+      <div class="swiper-slide"><img src="/bin/7.jpg"></div>
+      <div class="swiper-slide"><img src="/bin/tq.webp"></div>
+
+
+      <!-- Tambahkan slide sesuai kebutuhan -->
+    </div>
+    <!-- Jika diperlukan pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <a href="https://Wa.me/+6287718761419"><button><h1>chat me</h1></button></a>
+</center>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      // Pilih efek kartu di sini
+      effect: 'cards',
+      // Konfigurasi swiper lainnya di sini
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
+</body>
+</html>

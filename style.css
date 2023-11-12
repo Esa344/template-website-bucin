@@ -1,0 +1,39 @@
+body {
+  font-size: 15pt;
+  height: 440px;
+  background-size: 450px;
+  background-image: url("/bin/fann.jpg");
+}
+
+.content {
+  margin-top: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 250px;
+  border: none;
+  padding-top: 25px;
+  border-radius: 20%;
+}
+.stiker{
+  width: 150px;
+  Border: none;
+  border-radius: 20%;
+}
+.opening{
+  color: lightgray;
+}
+.block{
+  display: block;
+}
+.flex{
+  display: flex;
+}
+.button{
+  display: none;
+  border: none;
+  border-radius: 20px;
+  background-color: lightpink;
+  width: 30%;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 80px;
+}
