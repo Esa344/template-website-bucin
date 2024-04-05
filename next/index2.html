@@ -4,11 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>pani🐕❤️💐</title>
+  <title>4u</title>
   <link rel="stylesheet" href="/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/bin/icon.png">
+  
   <style>
+    body {
+      margin: 0px;
+      display: flex;
+      align-items: center;
+    }
+
+    center {
+      width: 100vw;
+    }
+
     .content2 {
-      margin-top: 150px;
       background-color: rgba(0, 0, 0, 0.5);
       width: 400px;
       height: 350px;
@@ -68,6 +79,16 @@
       margin-top: 10px;
       font-weight: bold;
     }
+
+    img {
+      width: 99vw;
+      margin-top: -80px;
+    }
+
+    .boxImg {
+      position: fixed;
+      top: -60vh;
+    }
   </style>
 </head>
 
@@ -83,30 +104,68 @@
       <div class="output" id="output"></div>
       <button type="submit" class="next" onclick="lan()" id="next">lanjut</button>
     </div>
-
+    <div class="boxImg" id="boxImg">
+      <img src="/bin/pita.png" id="img1"></img>
+      <img src="/bin/pita.png" id="img2"></img>
+      <img src="/bin/pita.png" id="img3"></img>
+    </div>
   </center>
   <script>
+    let goal = 0
+    let jarakJatuh = 0
+    let miror1 = 1
+    let miror2 = -1
+    let opacity = 1.70
     document.getElementById('input').addEventListener('keydown', function(pull) {
       let input = document.getElementById('input').value
-      if (pull.key == 'Enter' && input == '<h1>hello world</h1>') {
+      if (pull.key == 'Enter') {
         last()
       }
     })
 
     function last() {
-      let input = document.getElementById('input').value
-      document.getElementById('output').innerHTML = input
-      document.getElementById('opening').innerHTML = '🎉yey km hebat🎉'
-      document.getElementById('bcode').style.display = 'none'
-      document.getElementById('submit').style.display = 'none'
-      document.getElementById('input').style.width = '250px'
-      document.getElementById('input').style.textAlign = 'center'
-      document.getElementById('next').style.display = 'inline'
+      if (goal != 1) {
+        let input = document.getElementById('input').value
+        if (input == '<h1>hello world</h1>') {
+          document.getElementById('output').style.color = 'black'
+          document.getElementById('output').innerHTML = input
+          document.getElementById('opening').innerHTML = '🎉yey km hebat🎉'
+          document.getElementById('bcode').style.display = 'none'
+          document.getElementById('submit').style.display = 'none'
+          document.getElementById('input').style.width = '250px'
+          document.getElementById('input').style.textAlign = 'center'
+          document.getElementById('next').style.display = 'inline'
+          pitaJatuh()
 
+          goal += 1
+        }
+        else {
+          document.getElementById('output').style.color = 'red'
+          document.getElementById('output').innerHTML = '<h1>error'
+        }
+      }
     }
-    function lan(){
-      window.location.href='/next/indexn.html'
+
+    function lan() {
+      window.location.href = '/next/indexn.html'
     }
+
+    function pitaJatuh() {
+      window.requestAnimationFrame(pitaJatuh)
+      if (jarakJatuh <= 200) { jarakJatuh++ }
+      document.getElementById('boxImg').style.marginTop = `${jarakJatuh}vh`
+      document.getElementById('boxImg').style.opacity = opacity -= 0.01
+    }
+
+    function miror() {
+      document.getElementById('img1').style.transform = `scalex(${miror1})`
+      document.getElementById('img2').style.transform = `scalex(${miror2})`
+      document.getElementById('img3').style.transform = `scalex(${miror1})`
+      miror1 *= -1
+      miror2 *= -1
+      setTimeout(miror, 100)
+    }
+    miror()
   </script>
 
 </body>

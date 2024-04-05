@@ -1,69 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="/style.css">
   <style>
-    body, html {
+    body,
+    html {
       height: 100%;
       margin: 0;
       overflow: hidden;
     }
+
     .swiper-container {
       width: 350px;
       height: 350px;
-      margin-top: 100px;
     }
+
     .swiper-slide {
       text-align: center;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: #fff; /* Tambahkan warna latar belakang sesuai kebutuhan */
-      border-radius: 10px; /* Tambahkan efek sudut melengkung pada kartu */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan pada kartu */
+      background: #fff;
+      /* Tambahkan warna latar belakang sesuai kebutuhan */
+      border-radius: 10px;
+      /* Tambahkan efek sudut melengkung pada kartu */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* Tambahkan efek bayangan pada kartu */
     }
-    img{
+
+    img {
       width: 100%;
     }
-    button{
+
+    button {
       border: none;
-      background-color: rgba(0, 0, 0, 0.0)
-    }
-    h1{
+      border-radius: 10px;
       background-color: lightpink;
+      height: auto;
+      width: auto;
+      padding: 5px;
+      font-weight: bolder;
+      font-size: 30px;
+    }
+
+    .last-slides {
+      background-color: #fff;
       border: none;
       border-radius: 20px;
-      height: 35px;
-      width: 90px;
+      height: 90%;
+      width: 90%;
       padding-top: 5px;
     }
   </style>
-  <title>Swiper Slide</title>
+  <title>4u</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/bin/icon.png">
 </head>
+
 <body>
-<center>
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="/bin/1.jpg"></div>
-      <div class="swiper-slide"><img src="/bin/2.jpg"></div>
-      <div class="swiper-slide"><img src="/bin/3.jpg"></div>
-      <div class="swiper-slide"><img src="/bin/4.jpg"></div>
-      <div class="swiper-slide"><img src="/bin/5.jpg"></div>
-      <div class="swiper-slide"><img src="/bin/6.jpg"></div>
-      <div class="swiper-slide"><img src="/bin/7.jpg"></div>
-      <div class="swiper-slide"><img src="/bin/tq.webp"></div>
+  <center>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/bin/1.jpg"></div>
+        <div class="swiper-slide"><img src="/bin/3.jpg"></div>
+        <div class="swiper-slide"><img src="/bin/4.jpg"></div>
+        <div class="swiper-slide"><img src="/bin/7.jpg"></div>
+        <div class="swiper-slide"><img src="/bin/tq.webp"></div>
+        <div class="swiper-slide last-slides">
+          <h1>aku punya sesuatu<br>💐💐buat km💐💐<br>😆terima yaa😆</h1>
+          <br>
+          <button onclick="window.location.href='/next/flowers/index.html'">buka hadiah</button>
+        </div>
 
 
-      <!-- Tambahkan slide sesuai kebutuhan -->
+        <!-- Tambahkan slide sesuai kebutuhan -->
+      </div>
+      <!-- Jika diperlukan pagination -->
+      <div class="swiper-pagination"></div>
     </div>
-    <!-- Jika diperlukan pagination -->
-    <div class="swiper-pagination"></div>
-  </div>
-  <a href="https://Wa.me/+6287718761419"><button><h1>chat me</h1></button></a>
-</center>
+  </center>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
@@ -82,4 +101,5 @@
   </script>
 
 </body>
+
 </html>
